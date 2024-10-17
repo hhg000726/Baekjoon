@@ -1,9 +1,11 @@
-now = input().split()
-tt = int(input())
-hour = int(now[0])
-mn = int(now[1])
-now = mn + hour * 60 + tt
-now = now % 1440
-hour = int(now / 60)
-mn = int(now % 60)
-print(hour, mn)
+import sys
+
+h, m = list(map(int, sys.stdin.readline().split()))
+c = int(sys.stdin.readline())
+
+m += c
+h += m // 60
+m %= 60
+h %= 24
+
+print(h, m)
