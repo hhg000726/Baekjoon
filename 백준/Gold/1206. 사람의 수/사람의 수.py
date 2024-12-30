@@ -4,11 +4,7 @@ N = int(sys.stdin.readline())
 nums = []
 
 for _ in range(N):
-  t = sys.stdin.readline()
-  if t[:2] == "10":
-    nums.append(int(t[3:]))
-  else:
-    nums.append(int(t[2:]))
+  nums.append(int(sys.stdin.readline().split('.')[1]))
 
 a = 0
 i = 1
